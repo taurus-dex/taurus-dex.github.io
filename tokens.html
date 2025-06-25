@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taurus Tokens - Decentralized Exchange</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/taurus.css" rel="stylesheet">
+  <style>
+    body {
+      background: url('assets/backgrounds/starfield_bg.png') center/cover no-repeat fixed, var(--taurus-black);
+    }
+    .token-card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .token-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(240,185,11,0.2);
+    }
+    .token-icon {
+      width: 64px;
+      height: 64px;
+      border: 2px solid var(--taurus-gold);
+      border-radius: 50%;
+      padding: 2px;
+      transition: all 0.3s ease;
+      margin-bottom: 15px;
+    }
+    .token-card:hover .token-icon {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(240,185,11,0.5);
+    }
+    .search-bar {
+      background: rgba(30, 32, 38, 0.7);
+      border: 1px solid var(--taurus-border);
+      border-radius: 50px;
+      padding: 0.5rem 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .token-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/logo/taurus_logo.png" alt="Taurus Logo" width="48" height="48" class="me-2 rounded-circle img-gold-border">
+        Taurus
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="swap.html">Swap</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tokens.html">Tokens</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Market Stats Bar -->
+  <div class="py-3" style="background-color: rgba(30, 32, 38, 0.7); backdrop-filter: blur(10px);">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div class="d-flex align-items-center me-4 mb-2 mb-md-0">
+          <i class="bi bi-graph-up-arrow text-success me-2"></i>
+          <div>
+            <span class="text-secondary">Market Cap</span>
+            <span class="ms-2 fw-bold">$1.28T</span>
+            <span class="badge bg-success ms-1">+2.3%</span>
+          </div>
+        </div>
+        <div class="d-flex align-items-center me-4 mb-2 mb-md-0">
+          <i class="bi bi-currency-exchange text-warning me-2"></i>
+          <div>
+            <span class="text-secondary">24h Volume</span>
+            <span class="ms-2 fw-bold">$48.5B</span>
+          </div>
+        </div>
+        <div class="d-flex align-items-center me-4 mb-2 mb-md-0">
+          <i class="bi bi-coin text-info me-2"></i>
+          <div>
+            <span class="text-secondary">Tokens</span>
+            <span class="ms-2 fw-bold">150+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Token List Section -->
+  <main>
+    <section class="container py-5">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <h2 class="section-title fade-in">Token Dashboard</h2>
+          <p class="text-secondary fade-in" style="animation-delay: 0.2s;">Explore and analyze the most popular cryptocurrencies in the market.</p>
+        </div>
+        <div class="col-lg-6">
+          <div class="search-bar d-flex align-items-center fade-in" style="animation-delay: 0.3s;">
+            <i class="bi bi-search text-secondary me-3"></i>
+            <input type="text" class="form-control border-0 bg-transparent shadow-none" placeholder="Search token by name or symbol...">
+            <button class="btn btn-sm btn-outline-warning ms-2">Search</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Tokens -->
+      <div class="mb-5">
+        <h3 class="gold-gradient mb-4 fade-in">Featured Tokens</h3>
+        <div class="row g-4">
+          <div class="col-md-3 col-sm-6 fade-in" style="animation-delay: 0.1s;">
+            <div class="card token-card text-center p-3 position-relative">
+              <span class="badge bg-success token-badge">+1.2%</span>
+              <div class="text-center">
+                <img src="assets/icons/eth_logo.png" alt="ETH" class="token-icon">
+              </div>
+              <h5 class="card-title gold-gradient">Ethereum</h5>
+              <h6 class="text-secondary mb-3">ETH</h6>
+              <p class="card-text fs-4 fw-bold mb-2" id="eth-price">$3,250.12</p>
+              <a href="swap.html" class="btn btn-sm btn-outline-warning w-100">Trade</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 fade-in" style="animation-delay: 0.2s;">
+            <div class="card token-card text-center p-3 position-relative">
+              <span class="badge bg-danger token-badge">-0.8%</span>
+              <div class="text-center">
+                <img src="assets/icons/btc_logo.png" alt="BTC" class="token-icon">
+              </div>
+              <h5 class="card-title gold-gradient">Bitcoin</h5>
+              <h6 class="text-secondary mb-3">BTC</h6>
+              <p class="card-text fs-4 fw-bold mb-2" id="btc-price">$48,900.00</p>
+              <a href="swap.html" class="btn btn-sm btn-outline-warning w-100">Trade</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 fade-in" style="animation-delay: 0.3s;">
+            <div class="card token-card text-center p-3 position-relative">
+              <span class="badge bg-success token-badge">+0.5%</span>
+              <div class="text-center">
+                <img src="assets/icons/bnb_logo.png" alt="BNB" class="token-icon">
+              </div>
+              <h5 class="card-title gold-gradient">Binance Coin</h5>
+              <h6 class="text-secondary mb-3">BNB</h6>
+              <p class="card-text fs-4 fw-bold mb-2" id="bnb-price">$420.00</p>
+              <a href="swap.html" class="btn btn-sm btn-outline-warning w-100">Trade</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 fade-in" style="animation-delay: 0.4s;">
+            <div class="card token-card text-center p-3 position-relative">
+              <span class="badge bg-success token-badge">+0.0%</span>
+              <div class="text-center">
+                <img src="assets/icons/usdt_logo.png" alt="USDT" class="token-icon">
+              </div>
+              <h5 class="card-title gold-gradient">Tether</h5>
+              <h6 class="text-secondary mb-3">USDT</h6>
+              <p class="card-text fs-4 fw-bold mb-2" id="usdt-price">$1.00</p>
+              <a href="swap.html" class="btn btn-sm btn-outline-warning w-100">Trade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- All Tokens Table -->
+      <div class="card p-4 fade-in" style="animation-delay: 0.5s;">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="gold-gradient mb-0">All Tokens</h3>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-dark btn-sm active">All</button>
+            <button type="button" class="btn btn-dark btn-sm">DeFi</button>
+            <button type="button" class="btn btn-dark btn-sm">NFT</button>
+            <button type="button" class="btn btn-dark btn-sm">Layer 2</button>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-dark table-hover align-middle mb-0">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Token</th>
+                <th>Price (USD)</th>
+                <th>24h Change</th>
+                <th>Market Cap</th>
+                <th>Volume (24h)</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <img src="assets/icons/btc_logo.png" alt="BTC" width="32" class="me-3 rounded-circle">
+                    <div>
+                      <div class="fw-bold">Bitcoin</div>
+                      <div class="text-secondary small">BTC</div>
+                    </div>
+                  </div>
+                </td>
+                <td id="btc-price-table">$48,900.00</td>
+                <td><span class="text-danger">-0.8%</span></td>
+                <td>$920.5B</td>
+                <td>$28.4B</td>
+                <td><a href="swap.html" class="btn btn-sm btn-gold">Trade</a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <img src="assets/icons/eth_logo.png" alt="ETH" width="32" class="me-3 rounded-circle">
+                    <div>
+                      <div class="fw-bold">Ethereum</div>
+                      <div class="text-secondary small">ETH</div>
+                    </div>
+                  </div>
+                </td>
+                <td id="eth-price-table">$3,250.12</td>
+                <td><span class="text-success">+1.2%</span></td>
+                <td>$380.2B</td>
+                <td>$15.7B</td>
+                <td><a href="swap.html" class="btn btn-sm btn-gold">Trade</a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <img src="assets/icons/bnb_logo.png" alt="BNB" width="32" class="me-3 rounded-circle">
+                    <div>
+                      <div class="fw-bold">Binance Coin</div>
+                      <div class="text-secondary small">BNB</div>
+                    </div>
+                  </div>
+                </td>
+                <td id="bnb-price-table">$420.00</td>
+                <td><span class="text-success">+0.5%</span></td>
+                <td>$68.5B</td>
+                <td>$2.1B</td>
+                <td><a href="swap.html" class="btn btn-sm btn-gold">Trade</a></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <img src="assets/icons/usdt_logo.png" alt="USDT" width="32" class="me-3 rounded-circle">
+                    <div>
+                      <div class="fw-bold">Tether</div>
+                      <div class="text-secondary small">USDT</div>
+                    </div>
+                  </div>
+                </td>
+                <td id="usdt-price-table">$1.00</td>
+                <td><span class="text-success">+0.0%</span></td>
+                <td>$78.2B</td>
+                <td>$62.5B</td>
+                <td><a href="swap.html" class="btn btn-sm btn-gold">Trade</a></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <img src="assets/icons/ada_logo.png" alt="ADA" width="32" class="me-3 rounded-circle">
+                    <div>
+                      <div class="fw-bold">Cardano</div>
+                      <div class="text-secondary small">ADA</div>
+                    </div>
+                  </div>
+                </td>
+                <td id="ada-price-table">$1.20</td>
+                <td><span class="text-danger">-0.3%</span></td>
+                <td>$38.4B</td>
+                <td>$1.8B</td>
+                <td><a href="swap.html" class="btn btn-sm btn-gold">Trade</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+          <nav>
+            <ul class="pagination">
+              <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer mt-auto">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5 class="gold-gradient mb-3">Taurus DEX</h5>
+          <p class="mb-0">The next generation of decentralized trading, powered by blockchain technology and inspired by the cosmos.</p>
+        </div>
+        <div class="col-md-2 mb-4 mb-md-0">
+          <h6 class="text-white mb-3">Products</h6>
+          <ul class="list-unstyled">
+            <li><a href="swap.html" class="text-secondary text-decoration-none">Swap</a></li>
+            <li><a href="tokens.html" class="text-secondary text-decoration-none">Tokens</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4 mb-md-0">
+          <h6 class="text-white mb-3">About</h6>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="text-secondary text-decoration-none">Team</a></li>
+            <li><a href="about.html" class="text-secondary text-decoration-none">Vision</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4 mb-md-0">
+          <h6 class="text-white mb-3">Connect</h6>
+          <div class="d-flex gap-4">
+            <a href="#" class="text-secondary fs-4"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-secondary fs-4"><i class="bi bi-telegram"></i></a>
+            <a href="#" class="text-secondary fs-4"><i class="bi bi-discord"></i></a>
+            <a href="#" class="text-secondary fs-4"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <span>&copy; 2024 Taurus DEX. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Function to fetch cryptocurrency prices
+    async function fetchCryptoPrices() {
+      try {
+        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,tether,cardano&vs_currencies=usd');
+        const data = await response.json();
+        
+        // Update card prices
+        document.getElementById('btc-price').textContent = '$' + data.bitcoin.usd.toLocaleString();
+        document.getElementById('eth-price').textContent = '$' + data.ethereum.usd.toLocaleString();
+        document.getElementById('bnb-price').textContent = '$' + data.binancecoin.usd.toLocaleString();
+        document.getElementById('usdt-price').textContent = '$' + data.tether.usd.toLocaleString();
+        
+        // Update table prices
+        document.getElementById('btc-price-table').textContent = '$' + data.bitcoin.usd.toLocaleString();
+        document.getElementById('eth-price-table').textContent = '$' + data.ethereum.usd.toLocaleString();
+        document.getElementById('bnb-price-table').textContent = '$' + data.binancecoin.usd.toLocaleString();
+        document.getElementById('usdt-price-table').textContent = '$' + data.tether.usd.toLocaleString();
+        document.getElementById('ada-price-table').textContent = '$' + data.cardano.usd.toLocaleString();
+      } catch (error) {
+        console.error('Error fetching cryptocurrency prices:', error);
+      }
+    }
+    
+    // Fetch prices when page loads
+    document.addEventListener('DOMContentLoaded', fetchCryptoPrices);
+  </script>
+</body>
+</html> 

@@ -1,0 +1,407 @@
+/* Taurus Custom Styles - Black & Gold Financial Theme (Binance Inspired) */
+:root {
+  --taurus-black: #0c0e14;
+  --taurus-dark: #14151a;
+  --taurus-card: #1e2026;
+  --taurus-gold: #f0b90b;
+  --taurus-gold-hover: #f8d33a;
+  --taurus-gold-gradient: linear-gradient(90deg, #f0b90b 0%, #ffd700 100%);
+  --taurus-text-primary: #ffffff;
+  --taurus-text-secondary: #a0a9b6;
+  --taurus-border: #2a2d35;
+}
+
+body {
+  background: var(--taurus-black);
+  color: var(--taurus-text-primary);
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+/* Navbar Styling */
+.navbar {
+  background: rgba(14, 16, 22, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--taurus-border);
+  padding: 0.8rem 0;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  color: var(--taurus-gold) !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: var(--taurus-text-primary) !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--taurus-gold) !important;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--taurus-gold);
+}
+
+/* Button Styling */
+.btn-gold {
+  background: var(--taurus-gold-gradient);
+  color: var(--taurus-black);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(240,185,11,0.25);
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  padding: 0.6rem 1.5rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.btn-gold:hover {
+  box-shadow: 0 6px 18px rgba(240,185,11,0.4);
+  color: var(--taurus-black);
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #f8d33a 0%, #ffea80 100%);
+}
+
+.btn-outline-warning {
+  border-color: var(--taurus-gold);
+  color: var(--taurus-gold);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-warning:hover {
+  background-color: var(--taurus-gold);
+  border-color: var(--taurus-gold);
+  color: var(--taurus-black);
+  transform: translateY(-2px);
+}
+
+/* Card Styling */
+.card {
+  background: var(--taurus-card);
+  border: 1px solid var(--taurus-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.card-title {
+  color: var(--taurus-gold);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.card-text {
+  color: var(--taurus-text-primary);
+  font-weight: 400;
+}
+
+.text-secondary {
+  color: var(--taurus-text-secondary) !important;
+}
+
+.card-header {
+  background: rgba(20, 21, 26, 0.7);
+  border-bottom: 1px solid var(--taurus-border);
+  color: var(--taurus-gold);
+  font-weight: 600;
+}
+
+/* Section Title Styling */
+.section-title {
+  color: var(--taurus-gold);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.8rem;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--taurus-gold-gradient);
+}
+
+.text-center .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Gold Gradient Text */
+.gold-gradient {
+  background: var(--taurus-gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+/* Form Controls */
+.form-control {
+  background-color: rgba(20, 21, 26, 0.7);
+  border: 1px solid var(--taurus-border);
+  color: var(--taurus-text-primary);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: rgba(30, 32, 38, 0.9);
+  border-color: var(--taurus-gold);
+  box-shadow: 0 0 0 3px rgba(240,185,11,0.15);
+  color: var(--taurus-text-primary);
+}
+
+/* 调亮输入框占位符颜色 */
+::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.input-group-text {
+  background-color: rgba(20, 21, 26, 0.9);
+  border: 1px solid var(--taurus-border);
+  color: var(--taurus-gold);
+}
+
+/* Table Styling */
+.table {
+  color: var(--taurus-text-primary);
+}
+
+.table-dark {
+  background-color: var(--taurus-card);
+}
+
+.table-dark th {
+  background-color: rgba(14, 16, 22, 0.7);
+  color: var(--taurus-gold);
+  border-bottom: none;
+  font-weight: 600;
+}
+
+.table-dark td {
+  border-color: var(--taurus-border);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(240,185,11,0.05);
+}
+
+/* Footer Styling */
+.footer {
+  background: var(--taurus-dark);
+  color: var(--taurus-text-secondary);
+  border-top: 1px solid var(--taurus-border);
+  padding: 2rem 0 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Hero Section Enhancement */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(12,14,20,0.4), rgba(12,14,20,0.8));
+}
+
+/* Image Enhancements */
+.img-gold-border {
+  border: 2px solid var(--taurus-gold);
+  box-shadow: 0 5px 15px rgba(240,185,11,0.2);
+  transition: all 0.3s ease;
+}
+
+.img-gold-border:hover {
+  box-shadow: 0 8px 25px rgba(240,185,11,0.4);
+  transform: scale(1.05);
+}
+
+/* Badge Styling */
+.badge {
+  font-weight: 500;
+  padding: 0.4em 0.8em;
+  border-radius: 4px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  .hero-section {
+    height: 400px;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--taurus-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--taurus-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--taurus-gold);
+}
+
+/* Fix for Swap Page Footer */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+/* Accordion styling */
+.accordion-button:not(.collapsed) {
+  color: var(--taurus-gold);
+  background-color: rgba(240,185,11,0.05);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(240,185,11,0.25);
+}
+
+/* 调亮FAQ未点击时的文字颜色 */
+.accordion-button.collapsed {
+  color: #ffffff;
+}
+
+/* Token card text */
+.token-card h6.text-secondary {
+  color: #d0d5dd !important;
+}
+
+.token-card .card-text {
+  color: #ffffff;
+}
+
+/* Team card text */
+.team-card h6.text-secondary {
+  color: #d0d5dd !important;
+}
+
+.team-card .card-text {
+  color: #ffffff;
+}
+
+/* Brighten mb-0 text */
+.mb-0 {
+  color: #ffffff !important;
+}
+
+p.mb-0 {
+  color: #f0f0f0 !important;
+}
+
+/* Fix team avatar display */
+.team-avatar {
+  width: 100px;
+  height: 100px;
+  border: 3px solid var(--taurus-gold);
+  border-radius: 50%;
+  padding: 3px;
+  margin-top: -50px;
+  background-color: var(--taurus-card);
+  transition: all 0.3s ease;
+  object-fit: cover;
+}
+
+.team-card {
+  padding-top: 50px !important;
+  min-height: 420px; /* 增加团队成员div的高度 */
+}
+
+.team-card .text-center {
+  margin-top: -30px;
+} 
