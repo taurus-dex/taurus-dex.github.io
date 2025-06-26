@@ -208,6 +208,7 @@
       <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="assets/logo/taurus_logo.png" alt="Taurus Logo" width="48" height="48" class="me-2 rounded-circle img-gold-border">
         Taurus
+        <span class="badge bg-warning text-dark ms-2 fs-6">Beta</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -215,7 +216,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="swap.html">Swap</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://taurus-dex.github.io/">Swap</a></li>
           <li class="nav-item"><a class="nav-link" href="tokens.html">Tokens</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -264,8 +265,8 @@
           <h1 class="hero-title gold-gradient mb-4">TAURUS</h1>
           <p class="hero-subtitle text-light mb-5">Decentralized. Secure. Limitless.<br>Experience the next generation of DeFi trading.</p>
           <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-            <a href="swap.html" class="btn btn-gold btn-lg px-5 py-3">Start Trading</a>
-            <a href="about.html" class="btn btn-outline-warning btn-lg px-5 py-3">Learn More</a>
+                            <a href="https://taurus-dex.github.io/" class="btn btn-gold btn-lg px-5 py-3">Start Trading</a>
+                <a href="about.html" class="btn btn-outline-warning btn-lg px-5 py-3">Learn More</a>
           </div>
         </div>
         <div class="col-lg-6 d-none d-lg-block fade-in slide-in-right" style="animation-delay: 0.3s;">
@@ -339,7 +340,7 @@
               </div>
               <p class="card-text">Enjoy instant token swaps with a user-friendly interface and real-time price updates, all powered by a robust DeFi engine.</p>
               <div class="mt-4 text-center">
-                <a href="swap.html" class="btn btn-sm btn-outline-warning">Try Swapping</a>
+                <a href="https://taurus-dex.github.io/" class="btn btn-sm btn-outline-warning">Try Swapping</a>
               </div>
             </div>
           </div>
@@ -380,7 +381,7 @@
                   <small class="text-secondary">BTC</small>
                 </div>
               </div>
-              <h5 class="mb-1">$48,900.00</h5>
+              <h5 class="mb-1" id="btc-price-card">$48,900.00</h5>
               <div class="d-flex align-items-center">
                 <span class="badge bg-success me-2">+1.2%</span>
                 <small class="text-secondary">24h</small>
@@ -396,7 +397,7 @@
                   <small class="text-secondary">ETH</small>
                 </div>
               </div>
-              <h5 class="mb-1">$3,250.12</h5>
+              <h5 class="mb-1" id="eth-price-card">$3,250.12</h5>
               <div class="d-flex align-items-center">
                 <span class="badge bg-danger me-2">-0.8%</span>
                 <small class="text-secondary">24h</small>
@@ -412,7 +413,7 @@
                   <small class="text-secondary">BNB</small>
                 </div>
               </div>
-              <h5 class="mb-1">$420.00</h5>
+              <h5 class="mb-1" id="bnb-price-card">$420.00</h5>
               <div class="d-flex align-items-center">
                 <span class="badge bg-success me-2">+0.5%</span>
                 <small class="text-secondary">24h</small>
@@ -428,7 +429,7 @@
                   <small class="text-secondary">ADA</small>
                 </div>
               </div>
-              <h5 class="mb-1">$0.58</h5>
+              <h5 class="mb-1" id="ada-price-card">$0.58</h5>
               <div class="d-flex align-items-center">
                 <span class="badge bg-success me-2">+1.7%</span>
                 <small class="text-secondary">24h</small>
@@ -448,7 +449,7 @@
             <h2 class="display-4 fw-bold gold-gradient mb-4">Ready to Start Trading?</h2>
             <p class="lead text-light fs-4 mb-5">Join thousands of traders who have already discovered the power of decentralized finance with Taurus.</p>
             <div class="d-flex justify-content-center gap-3 flex-wrap">
-              <a href="swap.html" class="btn btn-gold btn-lg px-5 py-3 fs-5">Launch Exchange</a>
+              <a href="https://taurus-dex.github.io/" class="btn btn-gold btn-lg px-5 py-3 fs-5">Launch Exchange</a>
               <a href="contact.html" class="btn btn-outline-warning btn-lg px-5 py-3 fs-5">Contact Us</a>
             </div>
           </div>
@@ -456,58 +457,36 @@
       </div>
     </section>
 
-    <!-- Partners -->
-    <section class="py-5 my-5">
-      <div class="container">
-        <h2 class="section-title text-center mb-5">Our Partners</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap">
-              <img src="assets/partners/jpmorgan_logo.png" alt="JPMorgan Chase" class="partner-logo fade-in" style="animation-delay: 0.1s;">
-              <img src="assets/partners/goldman_logo.png" alt="Goldman Sachs" class="partner-logo fade-in" style="animation-delay: 0.2s;">
-              <img src="assets/partners/morgan_stanley_logo.png" alt="Morgan Stanley" class="partner-logo fade-in" style="animation-delay: 0.3s;">
-              <img src="assets/partners/blackrock_logo.png" alt="BlackRock" class="partner-logo fade-in" style="animation-delay: 0.4s;">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
   </main>
 
   <!-- Footer -->
   <footer class="footer mt-auto">
     <div class="container">
-      <div class="row mb-4">
-        <div class="col-md-4 mb-4 mb-md-0">
+      <div class="d-flex justify-content-between align-items-center py-4">
+        <div>
           <h5 class="gold-gradient mb-3">Taurus DEX</h5>
-          <p class="mb-0">The next generation of decentralized trading, powered by blockchain technology and inspired by the cosmos.</p>
+          <p class="mb-0">The next generation of decentralized trading,<br>powered by blockchain technology and inspired by<br>the cosmos.</p>
         </div>
-        <div class="col-md-2 mb-4 mb-md-0">
-          <h6 class="text-white mb-3">Products</h6>
-          <ul class="list-unstyled">
-            <li><a href="swap.html" class="text-secondary text-decoration-none">Swap</a></li>
-            <li><a href="tokens.html" class="text-secondary text-decoration-none">Tokens</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2 mb-4 mb-md-0">
-          <h6 class="text-white mb-3">About</h6>
-          <ul class="list-unstyled">
-            <li><a href="about.html" class="text-secondary text-decoration-none">Team</a></li>
-            <li><a href="about.html" class="text-secondary text-decoration-none">Vision</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h6 class="text-white mb-3">Connect</h6>
-          <div class="d-flex gap-3">
-            <a href="#" class="text-secondary fs-4"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="text-secondary fs-4"><i class="bi bi-telegram"></i></a>
-            <a href="#" class="text-secondary fs-4"><i class="bi bi-discord"></i></a>
-            <a href="#" class="text-secondary fs-4"><i class="bi bi-github"></i></a>
-          </div>
+        <div class="d-flex gap-3">
+          <a href="https://taurus-main.github.io/" target="_blank" class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;" title="Main Site">
+            <i class="bi bi-house text-white"></i>
+          </a>
+          <a href="mailto:taurusdex@outlook.com" class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;" title="Email">
+            <i class="bi bi-envelope text-white"></i>
+          </a>
+          <a href="https://x.com/Taurus_DEX" target="_blank" class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;" title="Twitter/X">
+            <i class="bi bi-twitter text-white"></i>
+          </a>
+          <a href="https://github.com/taurus-main/taurus-main.github.io" target="_blank" class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;" title="GitHub">
+            <i class="bi bi-github text-white"></i>
+          </a>
         </div>
       </div>
       <hr class="border-secondary">
-      <span>&copy; 2024 Taurus DEX. All rights reserved.</span>
+      <div class="text-center">
+        <span>&copy; 2024 Taurus DEX. All rights reserved.</span>
+      </div>
     </div>
   </footer>
 
@@ -519,15 +498,29 @@
         const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,cardano&vs_currencies=usd&include_24h_change=true');
         const data = await response.json();
         
-        // Update market stats bar
-        if (data.bitcoin) {
+        // Update market stats bar (if elements exist)
+        if (data.bitcoin && document.getElementById('btc-price')) {
           document.getElementById('btc-price').textContent = '$' + data.bitcoin.usd.toLocaleString();
         }
-        if (data.ethereum) {
+        if (data.ethereum && document.getElementById('eth-price')) {
           document.getElementById('eth-price').textContent = '$' + data.ethereum.usd.toLocaleString();
         }
-        if (data.binancecoin) {
+        if (data.binancecoin && document.getElementById('bnb-price')) {
           document.getElementById('bnb-price').textContent = '$' + data.binancecoin.usd.toLocaleString();
+        }
+        
+        // Update Popular Tokens cards
+        if (data.bitcoin && document.getElementById('btc-price-card')) {
+          document.getElementById('btc-price-card').textContent = '$' + data.bitcoin.usd.toLocaleString();
+        }
+        if (data.ethereum && document.getElementById('eth-price-card')) {
+          document.getElementById('eth-price-card').textContent = '$' + data.ethereum.usd.toLocaleString();
+        }
+        if (data.binancecoin && document.getElementById('bnb-price-card')) {
+          document.getElementById('bnb-price-card').textContent = '$' + data.binancecoin.usd.toLocaleString();
+        }
+        if (data.cardano && document.getElementById('ada-price-card')) {
+          document.getElementById('ada-price-card').textContent = '$' + data.cardano.usd.toLocaleString();
         }
       } catch (error) {
         console.error('Error fetching cryptocurrency prices:', error);
